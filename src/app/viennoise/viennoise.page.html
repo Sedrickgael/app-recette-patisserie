@@ -1,0 +1,34 @@
+
+
+<ion-content>
+	<header class="header">
+		<a [routerLink]="['/accueil']" class="logo"></a>
+	</header>
+	<div class="nav">
+		<a [routerLink]="['/genoise/1']"><i class="fas fa-hotdog " ></i><em>Gâteau</em></a>
+		<a [routerLink]="['/viennoise/2']" class="active"><i class="fas fa-hamburger" ></i><em>Viénnoisérie</em></a>
+		<a [routerLink]="['/autres/3']"><i class="fa-birthday-cake" ></i><em>Autres</em></a>
+		<div class="clear"></div>
+	</div>
+	<br>
+	<br>
+
+
+	<div class="content">
+		<br>
+		<div>
+				<div class="items item" >
+					<a *ngFor='let rec of recette' (click)='Choix(rec.id)'>
+						<img src="../../assets/images/{{ rec.image }}" width="150" height="150" layout="responsive" class="rounded-circle">
+						<strong class="title">{{ rec.nom }}</strong>
+						<!--em>Mozzarela / Tomatoes</em-->
+						<span class="details">Détails</span>
+					</a>
+					
+					<div class="clear"></div>
+				</div>
+		</div>
+		
+	</div>	
+
+</ion-content>

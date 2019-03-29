@@ -1,0 +1,48 @@
+<ion-content>
+	<header class="header">
+		<a [routerLink]="['/accueil']" class="logo"></a>
+	</header>
+	<div class="nav">
+		<a [routerLink]="['/genoise/1']"><i class="fas fa-hotdog " ></i><em>Gâteau</em></a>
+		<a [routerLink]="['/viennoise/2']"><i class="fas fa-hamburger" ></i><em>Viénnoisérie</em></a>
+		<a [routerLink]="['/autres/3']"><i class="fa-birthday-cake" ></i><em>Autres</em></a>
+		<div class="clear"></div>
+	</div>
+	<br>
+	<br>
+
+
+	<div class="content">
+		<br>
+		<div>
+				<div class="" >
+					<a *ngFor='let det of details'>
+						<ion-card>
+						  <ion-card-header>
+						    <img src="../../assets/images/{{ det.image }}" width="150" height="150" layout="responsive" class="rounded-circle img">
+						    <ion-card-title><strong class="title">{{ det.nom }}</strong></ion-card-title>
+						  </ion-card-header>
+
+						  <ion-card-content>
+						  	<ul>
+						  		<li>
+						  		<span class="details">{{det.ingredients}}</span>
+						  		</li>
+						  		<br>
+						  		<li><span class="details">{{det.description}}</span></li>
+						  	</ul>
+						  							    
+						  							    
+						  </ion-card-content>
+						</ion-card>
+						
+					</a>
+					
+					<div class="clear"></div>
+				</div>
+		</div>
+		
+	</div>	
+
+
+</ion-content>
